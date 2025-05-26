@@ -1,0 +1,323 @@
+/* styles.css */
+:root {
+    --discord-dark: #36393f;
+    --discord-darker: #2f2f30;
+    --discord-darkest: #202225;
+    --discord-text: #dcddde;
+    --discord-text-muted: rgb(173, 173, 173);
+    --discord-primary: rgb(88, 95, 51);
+    --discord-primary-hover: #bbae56;
+    --discord-green: #d3d3d3;
+    --discord-red: #ed4245;
+    --discord-border: #4f545c;
+    --discord-input-bg: #40444b;
+    --discord-channel-bg: #393c43;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+  body {
+    color: var(--discord-dark);
+    color: var(--discord-text);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/harley-davidson-bs1eqd6zSiU-unsplash.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--discord-darkest);
+    font-size: 16px;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .title-style {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(
+      120deg,
+      #ffffff,
+      #d4d4d4,
+      #ffffff,
+      #d4d4d4,
+      #ffffff
+    );
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: brilhoTexto 8s ease-in-out infinite;
+  }
+  
+  
+
+  /* animação deslizando o brilho no texto */
+  @keyframes brilhoTexto {
+    0% {
+      background-position: -200% center;
+    }
+    50% {
+      background-position: 200% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
+  }
+
+  @keyframes fadetn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 2;
+      transform: translateY(0);
+    }
+  }
+
+  h1 {
+    color: #818181;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    animation: fadetn 0.8s ease-in-out;
+  }
+  
+  .container {
+    background-color: var(--discord-darker);
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--discord-border);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-in-out;
+    transition: all 0.6s ease;
+  }
+
+  .container:hover {
+    box-shadow: 0 6px 8px rgba(73, 73, 73, 0.753);
+    transform: scale(1.02);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(20, 20);
+      opacity: 0;
+    }
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--discord-text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  input[type="text"],
+  input[type="time"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    background-color: var(--discord-input-bg);
+    border: 1px solid var(--discord-border);
+    border-radius: 4px;
+    color: var(--discord-text);
+    font-size: 16px;
+    transition: all 0.2s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="time"]:focus,
+  input[type="number"]:focus {
+    outline: none;
+    border-color: var(--discord-primary);
+  }
+  
+  #placa {
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+  }
+  
+  p {
+    margin: 12px 0;
+    color: var(--discord-text-muted);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  p:first-of-type {
+    margin-top: 20px;
+    color: var(--discord-text-muted);
+    font-weight: 600;
+  }
+  
+  #gerarTicket {
+    background-color: var(--discord-primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    margin: 8px 0 16px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  #gerarTicket:hover {
+    background-color: var(--discord-primary-hover);
+    transform: translateY(-1px);
+  }
+  
+  #gerarTicket:active {
+    transform: translateY(0);
+  }
+  #gerarRelatorio{
+    background-color: var(--discord-primary);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    margin: 8px 0 16px;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  #gerarRelatorio:hover {
+    background-color: var(--discord-primary-hover);
+    transform: translateY(-1px);
+  }
+  
+  #gerarRelatorio:active {
+    transform: translateY(0);
+  }
+
+  
+  
+  /* Estilo para os resultados */
+  #placaSaida,
+  #horaEntradaSaida,
+  #horaSaidaSaida,
+  #valorPagar {
+    color: white;
+    font-weight: 600;
+    background-color: var(--discord-darkest);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-left: 4px;
+  }
+  
+  #placaSpan {
+    font-family: 'Courier New', monospace;
+  }
+
+  #valorPagar {
+    color: var(--discord-green);
+  }
+  
+  /* Efeito de notificação */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .pulse {
+    animation: pulse 0.5s ease;
+  }
+  
+  /* Adicionando ícones como no Discord */
+  p:before {
+    content: "•";
+    color: var(--discord-primary);
+    margin-right: 8px;
+  }
+  
+  /* Estilo para o resultado do Ticket/Relatorio */
+
+  #ticketResult{
+    display: none;
+  }
+  #ticketResult.visible {
+    display: block; 
+  }
+  #relatorioResult{
+    display: none; 
+  } 
+    #relatorioResult.visible {
+        display: block; 
+    }
+  
+  @keyframes fadeOn {
+    from {
+      opacity: 0;
+      transform: translateY(26px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    
+  footer{
+    margin-top: 20px;
+    color: var(--discord-text-muted);
+    font-size: 15px;
+    text-align: center;
+    animation: fadeOn 1s ease-in-out;
+  }
+  
+  

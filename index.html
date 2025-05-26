@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="work.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/bx-trip-icon.png" type="icon/png">
+    <title>Projeto Controle Pedágio</title>
+</head>
+<body>
+
+        <h1 class="title-style">Projeto Controle Pedágio</h1>
+        <div class="container">
+
+            <label for="placa">Placa do Veículo:</label>
+            <input type="text" name="placa" id="placa">
+
+            <label for="horaEntrada">Hora de iníco do trecho:</label>
+            <input type="time" name="horaEntrada" id="horaEntrada">
+
+            <label for="horaSaida">Hora de fim do trecho:</label>
+            <input type="time" name="horaSaida" id="horaSaida">
+
+            
+            <p>Ticket de cobrança:</p> 
+
+            <button id="gerarTicket" onclick="gerarTicket()">GERAR TICKET</button>
+           
+            <div id="ticketResult" style="margin-top: 20px;">
+                <p>Placa: <span id="placaSpan"></span></p>
+                <p>Hora de entrada: <span id="horaEntradaSpan"></span></p>
+                <p>Hora de saída: <span id="horaSaidaSpan"></span></p>
+                <p>Valor a pagar: R$<span id="valorPagar"></span></p>
+            </div>
+
+            <p>Relatório de veículos:</p>
+
+            <button id="gerarRelatorio" onclick="gerarRelatorio()" >GERAR RELATÓRIO</button>
+            
+            <div id="relatorioResult" style="margin-top: 20px;">
+                
+                <p>Menor velocidade registrada (menorVelocidade): <span id="menorVLSpan"></span></p>
+                <p>o Maior velocidade registada (maiorVelocidade): <span id="maiorVLSpan"></span></p>
+                <p>o Média das velocidades registradas (mediaVelocidade): <span id="mediaVlSpan"></span></p>
+                <p>o Total dos valores cobrados (totalValores): <span id="totalVlSpan"></span></p>
+                <p>o Hora de inicio do processamento (inicioProcesso): <span id="inicioPSpan"></span></p>
+                <p>o Hora do final do processamento (finalProcesso): <span id="finalPSpan"></span></p>
+
+            </div> 
+            
+        </div>
+        <br><footer>@&Copyright-Todos os direitos reservados-By @Catastrophe-Builders🔨</footer>
+    </body>
+
+</html>
